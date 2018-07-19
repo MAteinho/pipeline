@@ -5,7 +5,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-		sh 'make'
+				sh 'make'
+				archiveArtifacts artifacts: '*.exe', fingerprint: true
             }
         }
         stage('Test') {
