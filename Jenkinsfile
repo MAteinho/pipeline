@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-				sh gcc -o helloword.exe helloword.c
+		sh 'make'
             }
         }
         stage('Test') {
